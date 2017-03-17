@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_color">#ff3d444d</color>
+    <color name="title_text_color">#ffffffff</color>
+    <color name="bottom_divide_bar_color">#ffcacaca</color>
+    <color name="bottom_text_normal_color">#ff64717f</color>
+    <color name="bottom_text_pressed_color">#ff31363d</color>
+    <color name="interval_color">#ffececec</color>
+    <color name="bottom_menu_bg">#fff7f7f7</color>
+    <color name="signed_color">#ff00bb99</color>
+    <color name="profile_layout_pressed">#ffe2e2e2</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="community_list_lastrelay_text">#ffafafaf</color>
+    <color name="mgreen">#ff08b192</color>
+</resources>

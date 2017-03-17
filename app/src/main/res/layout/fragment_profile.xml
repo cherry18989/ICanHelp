@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/profileView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/white"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:id="@+id/profileimg"
+                    android:layout_height="60dp"
+                    android:layout_width="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginStart="25dp"
+                    android:background="@drawable/head_nologin"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/profileimg"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/profileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:text="cherry"
+                        android:layout_marginTop="15dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/profileSchool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电子科技大学"
+                        android:layout_below="@id/profileName"
+                        android:layout_marginTop="12dp"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white">
+                <LinearLayout
+                    android:id="@+id/followerView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    style="@style/FollowAndAttenItems"
+                    >
+                    <TextView
+                        android:id="@+id/followerNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="粉丝"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/attentionView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    style="@style/FollowAndAttenItems"
+                    >
+                    <TextView
+                        android:id="@+id/attentionNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关注"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/MyBlogView"
+                style="@style/ProfileItems"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/MyBlogImg"
+                    style="@style/WrapContent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/signinimg" />
+
+                <TextView
+                    android:id="@+id/MyBlogText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/MyBlogImg"
+                    android:text="我的动态" />
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/signinView"
+                style="@style/ProfileItems"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/signinImg"
+                    style="@style/WrapContent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/signinimg" />
+
+                <TextView
+                    android:id="@+id/signText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/signinImg"
+                    android:text="签到状态" />
+                <TextView
+                    android:id="@+id/signin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/signed_color"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/signText"
+                    android:text="未签到" />
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/ProfileItems"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/rankScoreImg"
+                    style="@style/WrapContent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/signinimg" />
+
+                <TextView
+                    android:id="@+id/rankScoreText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/rankScoreImg"
+                    android:text="等级分" />
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color"/>
+            <RelativeLayout
+                style="@style/ProfileItems">
+                <ImageView
+                    android:id="@+id/creditScoreImg"
+                    style="@style/WrapContent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/signinimg" />
+
+                <TextView
+                    android:id="@+id/creditScoreText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/creditScoreImg"
+                    android:text="信用分" />
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color"/>
+            <RelativeLayout
+                style="@style/ProfileItems">
+                <ImageView
+                    android:id="@+id/rankImg"
+                    style="@style/WrapContent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/signinimg" />
+
+                <TextView
+                    android:id="@+id/rankText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/rankImg"
+                    android:text="等级" />
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color"/>
+            <RelativeLayout
+                style="@style/ProfileItems">
+                <ImageView
+                    android:id="@+id/currencyImg"
+                    style="@style/WrapContent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/signinimg" />
+
+                <TextView
+                    android:id="@+id/currencyText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/currencyImg"
+                    android:text="仙石数" />
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/ProfileItems"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/favoriteImg"
+                    style="@style/WrapContent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_favorite" />
+
+                <TextView
+                    android:id="@+id/favoriteText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/favoriteImg"
+                    android:text="我的收藏" />
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/settingView"
+                style="@style/ProfileItems"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/settingImg"
+                    style="@style/WrapContent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/signinimg" />
+
+                <TextView
+                    android:id="@+id/settingText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/settingImg"
+                    android:text="设置" />
+
+                <ImageView
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

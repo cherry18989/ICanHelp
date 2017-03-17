@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_write_blog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.a007.robot.icanhelp.blogActivity.WriteBlogActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_color">
+        <Button
+            android:id="@+id/Back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="返回"
+            android:textSize="16sp"
+            android:textColor="@drawable/title_selector"
+            android:clickable="true"
+            android:background="@color/title_color"
+            />
+        <Button
+            android:id="@+id/sendBlog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="发送"
+            android:textSize="16sp"
+            android:textColor="@color/mgreen"
+            android:clickable="true"
+            android:background="@color/title_color"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/blogContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:gravity="top|left"
+        android:scrollHorizontally="false"
+        android:padding="10dp"
+        android:background="@null"
+        android:focusable="true"
+        android:textSize="15sp"
+        android:minHeight="80dp"
+        android:maxLines="4"
+        android:hint="说出你的想法" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/addPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_picture"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/interval_color"
+        android:padding="5dp"/>
+    <RelativeLayout
+        android:id="@+id/blogTypeView"
+        style="@style/ProfileItems">
+        <ImageView
+            android:id="@+id/bolgTypeImg"
+            style="@style/WrapContent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/signinimg" />
+
+        <TextView
+            android:id="@+id/bolgTypeText"
+            style="@style/ProfileItemsText"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/bolgTypeImg"
+            android:text="状态类型" />
+        <ImageView
+            style="@style/WrapContent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/btn_y" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/interval_color"
+        android:padding="5dp"/>
+
+
+
+</LinearLayout>

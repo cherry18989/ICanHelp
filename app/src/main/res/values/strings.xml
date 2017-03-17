@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ICanHelp</string>
+    <string name="main">首页</string>
+    <string name="community">动态</string>
+    <string name="help">求助</string>
+    <string name="profile">我的</string>
+</resources>

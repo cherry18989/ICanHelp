@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_personal_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.a007.robot.icanhelp.profileActivity.PersonalInfoActivity">
+    <com.a007.robot.icanhelp.view.TitleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.a007.robot.icanhelp.view.TitleLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/profileView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/profile_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:id="@+id/pictureText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="头像" />
+
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_height="60dp"
+                    android:layout_width="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/pictureBt"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/head_nologin"/>
+
+
+                <ImageView
+                    android:id="@+id/pictureBt"
+                    style="@style/WrapContent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color" />
+
+            <RelativeLayout
+                android:id="@+id/nameView"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/nameText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="姓名" />
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/personalItemText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:text="陈莹" />
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color" />
+
+            <RelativeLayout
+                android:id="@+id/nickView"
+                style="@style/ProfileItems">
+
+
+                <TextView
+                    android:id="@+id/nickText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:text="昵称" />
+                <TextView
+                    android:id="@+id/nick"
+                    style="@style/personalItemText"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/nickBt"
+                    android:layout_marginRight="15dp"
+                    android:text="cherry" />
+
+
+                <ImageView
+                    android:id="@+id/nickBt"
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color"/>
+            <RelativeLayout
+                android:id="@+id/genderView"
+                style="@style/ProfileItems">
+
+                <TextView
+                    android:id="@+id/genderText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:text="性别" />
+                <TextView
+                    android:id="@+id/gender"
+                    style="@style/personalItemText"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/genderBt"
+                    android:layout_marginRight="15dp"
+                    android:text="女" />
+
+                <ImageView
+                    android:id="@+id/genderBt"
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color"/>
+            <RelativeLayout
+                android:id="@+id/schoolView"
+                style="@style/ProfileItems">
+
+                <TextView
+                    android:id="@+id/schoolText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="学校" />
+
+                <TextView
+                    android:id="@+id/school"
+                    style="@style/personalItemText"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/schoolBt"
+                    android:layout_marginRight="15dp"
+                    android:text="电子科技大学" />
+
+                <ImageView
+                    android:id="@+id/schoolBt"
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color"/>
+            <RelativeLayout
+                android:id="@+id/addressView"
+                style="@style/ProfileItems">
+
+                <TextView
+                    android:id="@+id/addressText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="地址" />
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/personalItemText"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/addressBt"
+                    android:layout_marginRight="15dp"
+                    android:text="四川 成都" />
+
+                <ImageView
+                    android:id="@+id/addressBt"
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interval_color">
+
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/signatureView"
+                style="@style/ProfileItems">
+
+                <TextView
+                    android:id="@+id/signatureText"
+                    style="@style/ProfileItemsText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="个性签名" />
+                <TextView
+                    android:id="@+id/signature"
+                    style="@style/personalItemText"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/signatureBt"
+                    android:layout_marginRight="15dp"
+                    android:text="未填写" />
+                <ImageView
+                    android:id="@+id/signatureBt"
+                    style="@style/WrapContent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/btn_y" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

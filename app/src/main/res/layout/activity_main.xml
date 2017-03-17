@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.a007.robot.icanhelp.MainActivity"
+    android:orientation="vertical">
+
+
+    <com.a007.robot.icanhelp.view.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </com.a007.robot.icanhelp.view.CustomViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bottom_divide_bar_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/bottom_menu_bg"
+        >
+        <!-- 首页 -->
+        <RelativeLayout
+            android:id="@+id/main"
+            style="@style/BottomRelativeLayou"
+            >
+            <ImageView android:id="@+id/mainimg"
+                style="@style/BottomImageView"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_main_study"
+                />
+            <TextView
+                android:id="@+id/studytext"
+                style="@style/BottomTextView"
+                android:text="@string/main"
+                android:layout_below="@id/mainimg"
+                />
+        </RelativeLayout>
+        <!-- 动态 -->
+        <RelativeLayout
+            android:id="@+id/community"
+            style="@style/BottomRelativeLayou"
+            >
+            <ImageView android:id="@+id/communityimg"
+                style="@style/BottomImageView"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_main_community"
+                />
+            <TextView
+                android:id="@+id/communitytext"
+                style="@style/BottomTextView"
+                android:text="@string/community"
+                android:layout_below="@id/communityimg"
+                />
+        </RelativeLayout>
+        <!-- 求助 -->
+        <RelativeLayout
+            android:id="@+id/help"
+            style="@style/BottomRelativeLayou"
+            >
+            <ImageView android:id="@+id/helpimg"
+                style="@style/BottomImageView"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_main_message"
+                />
+            <TextView
+                android:id="@+id/messagetext"
+                style="@style/BottomTextView"
+                android:text="@string/help"
+                android:layout_below="@id/helpimg"
+                />
+        </RelativeLayout>
+        <!-- 我的个人中心 -->
+        <RelativeLayout
+            android:id="@+id/profile"
+            style="@style/BottomRelativeLayou"
+            >
+            <ImageView android:id="@+id/profileimg"
+                style="@style/BottomImageView"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_main_profile"
+                />
+            <TextView
+                android:id="@+id/profiletext"
+                style="@style/BottomTextView"
+                android:text="@string/profile"
+                android:layout_below="@id/profileimg"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

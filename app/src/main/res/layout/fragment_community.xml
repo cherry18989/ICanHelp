@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.astuetz.PagerSlidingTabStrip
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/communityTabs">
+    </com.astuetz.PagerSlidingTabStrip>
+    <com.a007.robot.icanhelp.view.CustomViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/communityPager">
+
+    </com.a007.robot.icanhelp.view.CustomViewPager>
+
+</LinearLayout>

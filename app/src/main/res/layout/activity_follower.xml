@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_attention"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.a007.robot.icanhelp.profileActivity.AttentionActivity"
+    android:orientation="vertical">
+    <com.a007.robot.icanhelp.view.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.a007.robot.icanhelp.view.TitleLayout>
+    <ProgressBar
+        android:id="@+id/followerProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        />
+
+    <include layout="@layout/reload" android:id="@+id/reloadView" android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/followersView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部粉丝"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+        <ListView
+            android:id="@+id/followerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+        </ListView>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

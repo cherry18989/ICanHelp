@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        style="@style/AttenItem">
+
+        <ImageView
+            android:id="@+id/followerimg"
+            android:layout_height="60dp"
+            android:layout_width="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/head_nologin"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/followerimg"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:id="@+id/followerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="cherry"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/followerSchool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电子科技大学"
+                android:layout_below="@id/followerName"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/addFriend"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="关注"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/add_friend_selector"/>
+    </RelativeLayout>
+
+</LinearLayout>

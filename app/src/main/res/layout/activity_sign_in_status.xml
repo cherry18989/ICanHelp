@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_in_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.a007.robot.icanhelp.profileActivity.SignInStatusActivity">
+    <com.a007.robot.icanhelp.view.TitleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.a007.robot.icanhelp.view.TitleLayout>
+    <ListView
+        android:id="@+id/statusList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+    </ListView>
+
+</LinearLayout>
