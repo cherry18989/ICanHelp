@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -28,7 +30,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class WriteBlogActivity extends Activity implements View.OnClickListener{
+public class WriteBlogActivity extends Activity implements View.OnClickListener,TextWatcher {
     private Button Back;
     private Button sendBlog;
     private EditText blogContent;
@@ -47,12 +49,13 @@ public class WriteBlogActivity extends Activity implements View.OnClickListener{
                     Toast.makeText(WriteBlogActivity.this,"发送失败，请检查网络",Toast.LENGTH_SHORT).show();
                     break;
                 case 2:
-                    new AlertDialog.Builder(WriteBlogActivity.this).setMessage("发送失败").create().show();
-                    finish();
-                    break;
+                    Toast.makeText(WriteBlogActivity.this,"发布失败",Toast.LENGTH_LONG).show();
                 case 3:
-                    new AlertDialog.Builder(WriteBlogActivity.this).setMessage("发送成功").create().show();
+                    Toast.makeText(WriteBlogActivity.this,"已发布",Toast.LENGTH_LONG).show();
+                    break;
+                case 4:
                     finish();
+                    overridePendingTransition(R.anim.translate_out,R.anim.writeblog_translate_out);
                     break;
             }
         }
@@ -70,8 +73,10 @@ public class WriteBlogActivity extends Activity implements View.OnClickListener{
         blogContent = (EditText) findViewById(R.id.blogContent);
         addPicture = (Button) findViewById(R.id.addPicture);
         blogTypeView = (RelativeLayout) findViewById(R.id.blogTypeView);
+        blogContent.addTextChangedListener(this);
         Back.setOnClickListener(this);
         sendBlog.setOnClickListener(this);
+        sendBlog.setClickable(false);
         addPicture.setOnClickListener(this);
         blogTypeView.setOnClickListener(this);
     }
@@ -143,11 +148,13 @@ public class WriteBlogActivity extends Activity implements View.OnClickListener{
                     sb.append(readLine);
                 }
                 responseReader.close();
-                if(sb.equals("1")){
+                if(sb.toString().trim().equals("1")){
                     myHandler.sendEmptyMessage(3);
+                    myHandler.sendEmptyMessageDelayed(4,2000);
 
                 }else{
                     myHandler.sendEmptyMessage(2);
+                    myHandler.sendEmptyMessageDelayed(4,2000);
                 }
 
             }
@@ -160,5 +167,26 @@ public class WriteBlogActivity extends Activity implements View.OnClickListener{
         }
 
 
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+        if(!"".equals(blogContent.getText().toString().trim())){
+            sendBlog.setClickable(true);
+            sendBlog.setTextColor(getResources().getColor(R.color.mgreen));
+        }else{
+            sendBlog.setClickable(false);
+            sendBlog.setTextColor(getResources().getColor(android.R.color.white));
+        }
     }
 }

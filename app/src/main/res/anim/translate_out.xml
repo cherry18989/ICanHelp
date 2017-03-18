@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+    从30,30位置移动到500,500位置（相对于图片的初始位置）
+    -->
+    <translate
+        android:duration="700"
+        android:fromYDelta="0%p"
+        android:toYDelta="0%p">
+    </translate>
+</set>

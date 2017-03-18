@@ -37,6 +37,7 @@ public class BlogMineActivity extends Activity implements View.OnClickListener{
                 Intent intent = new Intent(BlogMineActivity.this,WriteBlogActivity.class);
                 intent.putExtra("id",id);
                 startActivity(intent);
+                overridePendingTransition(R.anim.translate_in,R.anim.translate_out);
                 break;
         }
     }
